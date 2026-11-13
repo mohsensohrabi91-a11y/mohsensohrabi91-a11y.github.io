@@ -3,46 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خرداد آنلاین | خبر فوری</title>
+<title>خرداد آنلاین | خبر فوری ایران و جهان</title>
 <meta name="description" content="آخرین خبرهای فوری ایران و جهان — پایگاه خبری خرداد آنلاین">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark">خ</span>
-      <span class="brand-text">خرداد <b>آنلاین</b></span>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="brand-blocks"><span>خ</span><span>ر</span><span>د</span></span>
+      <span class="brand-name">خرداد آنلاین<small>KHORDAD ONLINE</small></span>
     </a>
-    <div class="header-meta">
+    <div class="topbar-meta">
       <span id="jalali-date"></span>
-      <a class="tg-link" href="https://t.me/khordadonline1" target="_blank" rel="noopener">کانال تلگرام ↗</a>
-    </div>
-  </div>
-  <div class="breaking-bar">
-    <div class="container">
-      <span class="live-dot"></span>
-      <span>خبر فوری</span>
-      <span id="ticker" class="ticker"></span>
+      <a href="https://t.me/khordadonline1" target="_blank" rel="noopener">کانال تلگرام ↗</a>
     </div>
   </div>
 </header>
+<nav class="main-nav">
+  <div class="container">
+    <a href="index.html" class="active">صفحه اصلی</a>
+    <a href="section.html?cat=iran">ایران</a>
+    <a href="section.html?cat=world">جهان</a>
+    <a href="section.html?cat=sport">ورزش</a>
+    <a href="section.html?cat=breaking" class="nav-breaking">● خبر فوری</a>
+  </div>
+</nav>
+<div class="breaking-bar" id="breaking-bar" style="display:none">
+  <div class="container">
+    <span class="label"><span class="live-dot"></span>خبر فوری</span>
+    <a id="breaking-link" href="#"></a>
+  </div>
+</div>
 
 <main class="container">
-  <section id="hero" class="hero"></section>
-  <h2 class="section-title">آخرین خبرها</h2>
-  <section id="news-list" class="news-list"></section>
+  <section class="hero" id="hero"></section>
+  <section class="sub-grid" id="sub-grid"></section>
+
+  <div class="home-main">
+    <div>
+      <div class="section-head"><h2>آخرین خبرها</h2><a href="section.html?cat=all">همهٔ خبرها ←</a></div>
+      <div id="latest-list"></div>
+    </div>
+    <aside class="sidebar">
+      <div class="side-box">
+        <h3>مهم‌ترین‌ها</h3>
+        <div id="top-list"></div>
+      </div>
+      <div class="side-box">
+        <h3>در تلگرام ما</h3>
+        <p style="font-size:14px;color:#555">خبرهای فوری را زودتر از همه در کانال تلگرام خرداد آنلاین بخوانید.</p>
+        <p style="margin-top:10px"><a href="https://t.me/khordadonline1" target="_blank" rel="noopener" style="color:#bb1919;font-weight:700">@khordadonline1 ←</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section-block" id="block-iran"></section>
+  <section class="section-block" id="block-world"></section>
+  <section class="section-block" id="block-sport"></section>
+
   <p class="updated">آخرین به‌روزرسانی: <span id="updated-at"></span></p>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>پایگاه خبری خرداد آنلاین — khordadonline.com</p>
-    <p><a href="https://t.me/khordadonline1" target="_blank" rel="noopener">@khordadonline1</a></p>
+    <div class="footer-grid">
+      <div>
+        <h4>خرداد آنلاین</h4>
+        <p>پایگاه خبری خرداد آنلاین — پوشش زندهٔ مهم‌ترین خبرهای ایران و جهان، با تمرکز بر خبرهای فوری.</p>
+      </div>
+      <div>
+        <h4>بخش‌ها</h4>
+        <a href="section.html?cat=iran">ایران</a>
+        <a href="section.html?cat=world">جهان</a>
+        <a href="section.html?cat=sport">ورزش</a>
+        <a href="section.html?cat=breaking">خبر فوری</a>
+      </div>
+      <div>
+        <h4>ما را دنبال کنید</h4>
+        <a href="https://t.me/khordadonline1" target="_blank" rel="noopener">تلگرام — @khordadonline1</a>
+        <a href="https://www.instagram.com/khordadonline1" target="_blank" rel="noopener">اینستاگرام — khordadonline1</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© ۱۴۰۵ خرداد آنلاین — khordadonline.com</div>
   </div>
 </footer>
 
 <script src="app.js"></script>
+<script>renderHome();</script>
 </body>
 </html>
